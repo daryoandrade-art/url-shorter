@@ -3,7 +3,7 @@ import Database from "better-sqlite3";
 const db = new Database('database.sqlite');
 
 // Hablitar chaves estrangeiras
-db.pragma("foreign_keys" = ON);
+db.pragma('foreign_keys = ON');
 
 // Criar tabelas
 db.exec(`
