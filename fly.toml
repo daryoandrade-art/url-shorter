@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for url-shorter on 2026-11-27T00:46:42Z
+# fly.toml app configuration file generated for url-shorter-hpjtow on 2026-11-27T00:52:51Z
 #
 # See https://docs.fly.io/reference/configuration for information about how to use this file.
 #
 
-app = 'url-shorter'
+app = 'url-shorter-hpjtow'
 primary_region = 'iad'
 
 [build]
