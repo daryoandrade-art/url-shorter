@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encurtador de URL</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Encurtador de URL</h1>
+
+        <section class="card">
+            <h2>Encurtar link</h2>
+            <form id="shorten-form" novalidate>
+                <label for="url">URL</label>
+                <input type="text" id="url" name="url" placeholder="https://exemplo.com/pagina" autocomplete="off" required>
+                <small class="error" id="url-error"></small>
+
+                <label for="expires">Expira em (dias, opcional)</label>
+                <input type="number" id="expires" name="expires" min="1" step="1" placeholder="Ex: 7">
+                <small class="error" id="expires-error"></small>
+
+                <button type="submit" id="shorten-btn">Encurtar</button>
+            </form>
+
+            <div id="result" class="result hidden">
+                <p>Link curto:</p>
+                <div class="copy-row">
+                    <a id="short-url" href="#" target="_blank" rel="noopener"></a>
+                    <button type="button" id="copy-btn">Copiar</button>
+                </div>
+                <p class="muted" id="expires-info"></p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Consultar estatísticas</h2>
+            <form id="status-form" novalidate>
+                <label for="code">Código ou link curto</label>
+                <input type="text" id="code" name="code" placeholder="abc123" autocomplete="off" required>
+                <small class="error" id="code-error"></small>
+                <button type="submit">Consultar</button>
+            </form>
+
+            <div id="status-result" class="result hidden"></div>
+        </section>
+    </main>
+
+    <script src="/script.js"></script>
+</body>
+</html>
